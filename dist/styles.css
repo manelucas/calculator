@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* #calculator {
+  display: grid;
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  grid-template-areas: "screen screen screen screen" "screen screen screen screen" "clear di mul del" "sev ei ni min" "four five six plus" "one two three equal" "per zero dot equal";
+  grid-gap: 5px;
+  background-color: lightgray;
+  border: black 2px solid;
+}
+* #calculator #calculator div {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 40x;
+  font-size: 30px;
+}
+* #calculator #calculator div #calculator .screen {
+  grid-area: screen;
+  height: 150px;
+}
+* #calculator #calculator div #calculator .clear {
+  grid-area: clear;
+}
+* #calculator #calculator div #calculator .division {
+  grid-area: di;
+}
+* #calculator #calculator div #calculator .multiplication {
+  grid-area: mul;
+}
+* #calculator #calculator div #calculator .delete {
+  grid-area: del;
+}
+* #calculator #calculator div #calculator .delete img {
+  width: 25px;
+  height: 25px;
+}
+* #calculator #calculator div #calculator .seven {
+  grid-area: sev;
+}
+* #calculator #calculator div #calculator .eight {
+  grid-area: ei;
+}
+* #calculator #calculator div #calculator .nine {
+  grid-area: ni;
+}
+* #calculator #calculator div #calculator .minus {
+  grid-area: min;
+}
+* #calculator #calculator div #calculator .four {
+  grid-area: four;
+}
+* #calculator #calculator div #calculator .five {
+  grid-area: five;
+}
+* #calculator #calculator div #calculator .six {
+  grid-area: six;
+}
+* #calculator #calculator div #calculator .plus {
+  grid-area: plus;
+}
+* #calculator #calculator div #calculator .one {
+  grid-area: one;
+}
+* #calculator #calculator div #calculator .two {
+  grid-area: two;
+}
+* #calculator #calculator div #calculator .three {
+  grid-area: three;
+}
+* #calculator #calculator div #calculator .equals {
+  grid-area: equal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* #calculator #calculator div #calculator .percentage {
+  grid-area: per;
+}
+* #calculator #calculator div #calculator .zero {
+  grid-area: zero;
+}
+* #calculator #calculator div #calculator .dot {
+  grid-area: dot;
+}
+* #calculator #calculator div #calculator button {
+  height: 30px;
+  width: 20px;
+  font-weight: 900;
+  background-color: transparent;
+}
