@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  #calculator {
+    display: grid;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    grid-template-areas: "screen screen screen screen" "screen screen screen screen" "clear di mul del" "sev ei ni min" "four five six plus" "one two three equal" "per zero dot equal";
+    grid-gap: 5px;
+    background-color: lightgray;
+    border: black 2px solid;
+
+    #calculator div {
+      background-color: cadetblue;
+      text-align: center;
+      padding: 40x;
+      font-size: 30px;
+
+      #calculator .screen {
+        grid-area: screen;
+        height: 150px;
+      }
+      #calculator .clear {
+        grid-area: clear;
+      }
+      #calculator .division {
+        grid-area: di;
+      }
+      #calculator .multiplication {
+        grid-area: mul;
+      }
+      #calculator .delete {
+        grid-area: del;
+      }
+      #calculator .delete img {
+        width: 25px;
+        height: 25px;
+      }
+      #calculator .seven {
+        grid-area: sev;
+      }
+      #calculator .eight {
+        grid-area: ei;
+      }
+      #calculator .nine {
+        grid-area: ni;
+      }
+      #calculator .minus {
+        grid-area: min;
+      }
+      #calculator .four {
+        grid-area: four;
+      }
+      #calculator .five {
+        grid-area: five;
+      }
+      #calculator .six {
+        grid-area: six;
+      }
+      #calculator .plus {
+        grid-area: plus;
+      }
+      #calculator .one {
+        grid-area: one;
+      }
+      #calculator .two {
+        grid-area: two;
+      }
+      #calculator .three {
+        grid-area: three;
+      }
+      #calculator .equals {
+        grid-area: equal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #calculator .percentage {
+        grid-area: per;
+      }
+      #calculator .zero {
+        grid-area: zero;
+      }
+      #calculator .dot {
+        grid-area: dot;
+      }
+      #calculator button {
+        height: 30px;
+        width: 20px;
+        font-weight: 900;
+        background-color: transparent;
+      }
+    }
+  }
+}
