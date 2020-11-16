@@ -5,8 +5,8 @@ const calculator = {
   operator: null,
 };
 
+const display = document.querySelector(".screen");
 const updateDisplay = () => {
-  const display = document.querySelector(".screen");
   display.value = calculator.displayValue;
 }
 
@@ -18,21 +18,18 @@ keys.addEventListener("click", (event) => {
   if (!target.matches("button")) {
     return;
   }
-
   if (target.classList.contains("operator")) {
     handleOperator(target.value);
     updateDisplay();
     return;
   }
-
   if (target.classList.contains("decimal")) {
     inputDecimal(target.value);
     updateDisplay();
     return;
   }
-
   if (target.classList.contains("clear")) {
-    resetCalculator();
+    reset();
     updateDisplay();
     return;
   }
@@ -72,7 +69,7 @@ const handleOperator = (nextOperator) => {
     return;
   }
 
-  if (firstOperand == null) {
+  if (firstOperand === null) {
     calculator.firstOperand = inputValue;
   } else if (operator) {
     const currentValue = firstOperand || 0;
@@ -95,11 +92,10 @@ const performCalculation = {
   "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
 
   "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
-
-  "=": (firstOperand, secondOperand) => secondOperand,
 };
 
-const resetCalculator = () => {
+// clear button reset
+const reset = () => {
   calculator.displayValue = "0";
   calculator.firstOperand = null;
   calculator.waitingForSecondOperand = false;
